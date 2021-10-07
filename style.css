@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.outer{
+    background-image: url(./image/background2.jpg);
+    background-size: cover;
+    position: relative;
+    height: 800px;
+    width: 1530px;
+    border: 2px solid red;
+    top: 100px;
+    margin: auto;
+}
