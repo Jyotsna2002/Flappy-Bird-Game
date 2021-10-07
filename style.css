@@ -4,7 +4,7 @@
 }
 body{
     height: 100vh;
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-image: linear-gradient(to top, #e4192a 0%, #e9ec19 100%);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -12,12 +12,18 @@ body{
     background-image: url(./image/background2.jpg);
     background-size: cover;
     position: relative;
-    height: 75vh;
-    width: 65vw;
-    border: 2px solid red;
-    top: 15vh;
+    height: 92vh;
+    width: 96%;
+    border: none;
+    top: 4vh;
     margin: auto;
     background-repeat: no-repeat;
-
-    
+    box-shadow: 2px 3px 60px grey;
+    position: relative;
+}
+#bird{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
 }
