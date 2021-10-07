@@ -12,9 +12,12 @@ body{
     background-image: url(./image/background2.jpg);
     background-size: cover;
     position: relative;
-    height: 800px;
-    width: 1530px;
+    height: 75vh;
+    width: 65vw;
     border: 2px solid red;
-    top: 100px;
+    top: 15vh;
     margin: auto;
+    background-repeat: no-repeat;
+
+    
 }
