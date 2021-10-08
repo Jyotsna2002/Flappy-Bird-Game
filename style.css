@@ -35,6 +35,7 @@ body{
     position: absolute;
     width:8%;
     height: 100%;
+    visibility: hidden;
 }
 .btn{
     position: absolute;
