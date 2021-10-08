@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var character=document.getElementById("bird");
 var jumping=0;
 var counter=0;
@@ -55,7 +54,6 @@ function jump(){
         jumpCount++;
     },10);
 }*/
-=======
 function startGame()
 {
     clearInterval(id);
@@ -89,4 +87,3 @@ function startGame()
     }
 
 }
->>>>>>> a558ea9e1ece64e424b63557f931ccd8133f76d8
