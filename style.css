@@ -7,6 +7,7 @@ body{
     background-image: linear-gradient(to top, #c7c7ca 0%, #f0b20a 100%);
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 .outer{
     background-image: url(./image/background2.jpg);
@@ -20,11 +21,52 @@ body{
     background-repeat: no-repeat;
     box-shadow: 5px 5px 100px grey;
     position: relative;
+<<<<<<< HEAD
     overflow: hidden;
+=======
+    overflow:hidden;
+>>>>>>> a558ea9e1ece64e424b63557f931ccd8133f76d8
 }
 #bird{
-    width: 90px;
-    height: 90px;
+    width: 7%;
+    height: 12%;
     position: absolute;
+<<<<<<< HEAD
     top: 200px;
+=======
+    top: 50%;
+}
+#block{
+    position: absolute;
+    width:8%;
+    height: 100%;
+}
+.btn{
+    position: absolute;
+    width: 4%;
+    height: 3%;
+    background-color: gray;
+    color: white;
+    border-radius: 20%;
+}
+
+#pipetop{
+    position: absolute;
+    display: inline-block;
+    background-image: url(image/pipetop.png);
+    height: 50%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0px;
+}
+#pipebottom{
+    position: absolute;
+    background-image: url(image/pipebottom.png);
+    height: 50%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom:0px;
+>>>>>>> a558ea9e1ece64e424b63557f931ccd8133f76d8
 }
