@@ -4,26 +4,27 @@
 }
 body{
     height: 100vh;
-    background-image: linear-gradient(to top, #e4192a 0%, #e9ec19 100%);
+    background-image: linear-gradient(to top, #c7c7ca 0%, #f0b20a 100%);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .outer{
     background-image: url(./image/background2.jpg);
-    background-size: cover;
+    background-size:cover;
     position: relative;
-    height: 92vh;
-    width: 96%;
+    height: 90vh;
+    width: 80vw;
     border: none;
-    top: 4vh;
+    top: 4.98vh;
     margin: auto;
     background-repeat: no-repeat;
-    box-shadow: 2px 3px 60px grey;
+    box-shadow: 5px 5px 100px grey;
     position: relative;
+    overflow: hidden;
 }
 #bird{
     width: 90px;
     height: 90px;
     position: absolute;
-    top: 50%;
+    top: 200px;
 }
