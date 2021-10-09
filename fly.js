@@ -8,7 +8,7 @@ function down()
 {
     var charactop=parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     character.style.top=(charactop+3)+'px'; 
-    character.style.transform="rotate(90deg)";
+    character.style.transform="rotate(60deg)";
     /*var holetop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
     var blockleft=parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     */
