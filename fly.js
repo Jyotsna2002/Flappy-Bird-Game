@@ -9,12 +9,11 @@ function down()
     var charactop=parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     character.style.top=(charactop+3)+'px'; 
     character.style.transform="rotate(90deg)";
-    /*var holetop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
+    var holetop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
     var blockleft=parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    */
-    if(charactop>456)  
+    if((charactop>456)||((blockleft<-15)&&(blockleft>109)))  
     {
-        window.alert("game over!!");
+      /* window.alert("game over!!");*/
        character.style.top=50+"px";
     } 
 }
@@ -26,7 +25,7 @@ function jump(){
         var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
         if((characterTop>0))
         character.style.top = (characterTop-4)+"px";
-        character.style.transform="rotate(-360deg)";
+        character.style.transform="rotate(0deg)";
         if(jumpCount>20){
             clearInterval(jumpInterval);
             jumping=0;
