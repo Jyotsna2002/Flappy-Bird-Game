@@ -14,12 +14,20 @@ function down()
     var blockleft=parseInt(window.getComputedStyle(block1).getPropertyValue("left"));
     if((charactop>850)||((blockleft<155)&&(blockleft>50)))  
     {
-       window.alert("game over!!");
-       character.style.top=100+"px";
-       document.getElementById(replay).style.visibility="visible";
-       document.getElementById(btn).style.visibility="hidden";
+        //    window.alert("game over!!");
+        stop();
+        character.style.top=100+"px";
+        document.getElementById(replay).style.visibility="visible";
+        document.getElementById(btn).style.visibility="hidden";
     } 
 }
+}
+function  stop()
+{
+    document.getElementById("gameover").innerHTML="GameOver";
+    document.getElementById("replay").style.visibility="visible";
+    clearInterval(id);
+
 }
 function jump(){
     jumping= 1;
@@ -39,7 +47,7 @@ function jump(){
 }
 function startGame()
 {   
-
+    clearInterval(id);
     var block=document.getElementById("block1");
     var i=document.getElementsByClassName("outer")[0].offsetWidth;
     var j=document.getElementsByClassName("outer")[0].offsetWidth;
