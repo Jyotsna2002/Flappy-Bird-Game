@@ -13,8 +13,8 @@ body{
     background-image: url(./image/background.jpg);
     background-size:contain;
     position: relative;
-    height: 525px;
-    width:1100px;
+    height: 1000px;
+    width:1800px;
     border: none;
     top: 4.98vh;
     margin: auto;
@@ -55,6 +55,6 @@ body{
     top: 200px;
     height: 220px;
     width: 55px;
-    background-size:contain;
+    background-size:cover;
     background-repeat: no-repeat;
 }
