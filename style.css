@@ -13,7 +13,7 @@ body{
     background-image: url(./image/background2.jpg);
     background-size:cover;
     position: relative;
-    height: 525px;
+    height: 90%;
     width: 80vw;
     border: none;
     top: 4.98vh;
@@ -51,7 +51,7 @@ body{
     position: absolute;
     display: inline-block;
     background-image: url(image/pipetop.png);
-    height: 50%;
+    height: 1000px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
