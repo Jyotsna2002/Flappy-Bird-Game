@@ -39,7 +39,7 @@ body{
     left: -200px;
     background-size: contain;
 }
-.btn{
+#btn{
     position: absolute;
     width: 200px;
     height: 88px;
@@ -47,10 +47,10 @@ body{
     color: white;
     font-size: 50px;
     z-index: 1;
-    left:180px;
+    left:250px;
     border: transparent;
 }
-.btn:hover{
+#btn:hover{
     background-color:transparent;
     box-shadow:3px 5px 100px grey;
     border: 5px solid white;
@@ -64,4 +64,21 @@ body{
     width: 100px;
     background-size:cover;
     background-repeat: no-repeat;
+}
+#replay{
+    position: absolute;
+    width: 200px;
+    height: 88px;
+    background-color: rgb(38, 163, 24);
+    color: white;
+    font-size: 50px;
+    z-index: 1;
+    left:0px;
+    border: transparent;
+    visibility: hidden;
+}
+#replay:hover{
+    background-color:transparent;
+    box-shadow:3px 5px 100px grey;
+    border: 5px solid white;
 }
