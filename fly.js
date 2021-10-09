@@ -41,26 +41,27 @@ function startGame()
     var id=null;
     var block=document.getElementById("block");
     var i=document.getElementsByClassName("outer")[0].offsetWidth;
+    var j=document.getElementsByClassName("outer")[0].offsetWidth;
     var x=7+Math.random()*10;
     var y=8+Math.random()*10;
     id = setInterval(moveBlock,5);
     function moveBlock()
     {
-        i--;
-        if(i==-80){
+        i--;j--;
+        if(i==-100){
             i=document.getElementsByClassName("outer")[0].offsetWidth;
-            blockPosition();
+            holePosition();
         }
 
         else{
             document.getElementById("block").style.left=i+"px";
+            document.getElementsByClassName("outer")[0].style.backgroundPositionX=j+"px";
        
         // document.getElementById("pipebottom").style.height = 100 - (document.getElementById("pipetop").offsetHeight + 15) + "%";
         }
     }
-    function blockPosition(){
-    document.getElementById("pipetop").style.top=-300+(Math.random()*200-100)+"px";      
-    document.getElementById("pipebottom").style.top=600+(Math.random()*200-100)+"px";      
+    function holePosition(){
+    document.getElementById("hole").style.top=100+(Math.random()*300)+"px";         
         
         
     }

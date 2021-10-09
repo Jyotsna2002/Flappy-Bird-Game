@@ -10,19 +10,18 @@ body{
     overflow: hidden;
 }
 .outer{
-    background-image: url(./image/background2.jpg);
-    background-size:cover;
+    background-image: url(./image/background.jpg);
+    background-size:contain;
     position: relative;
     height: 90%;
-    width: 80vw;
+    width:80%;
     border: none;
     top: 4.98vh;
     margin: auto;
-    background-repeat: no-repeat;
+    background-repeat:repeat-x;
     box-shadow: 5px 5px 100px grey;
     position: relative;
     overflow: hidden;
-    overflow:hidden;
 }
 #bird{
     width: 80px;
@@ -30,12 +29,16 @@ body{
     position: absolute;
     top: 200px;
     top: 50%;
+    z-index: 2;
 }
 #block{
+    background-image: url(image/block.jpg);
+    background-position: center;
     position: relative;
-    width:8%;
+    width:50px;
     height: 100%;
     left: -200px;
+    background-size: contain;
 }
 .btn{
     position: absolute;
@@ -45,23 +48,13 @@ body{
     color: white;
     border-radius: 20%;
 }
-
-#pipetop{
-    position: absolute;
-    display: inline-block;
-    background-image: url(image/pipetop.png);
-    height: 1000px;
-    width: 100%;
+#hole{
+    background-image: url(image/hole.jpg);
+    background-position: center;
+    position: relative;
+    top: 200px;
+    height: 220px;
+    width: 55px;
+    background-size:contain;
     background-repeat: no-repeat;
-    background-size: contain;
-    bottom:0px;
-}
-#pipebottom{
-    position: absolute;
-    background-image: url(image/pipebottom.png);
-    height: 1000px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    top:500px;
 }
