@@ -10,8 +10,8 @@ function down()
     var charactop=parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     character.style.top=(charactop+3)+'px'; 
     character.style.transform="rotate(60deg)";
-    var holetop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
-    var blockleft=parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+/*    var holetop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));*/
+    var blockleft=parseInt(window.getComputedStyle(block1).getPropertyValue("left"));
     if((charactop>850)||((blockleft<155)&&(blockleft>50)))  
     {
        window.alert("game over!!");
@@ -40,7 +40,6 @@ function jump(){
 function startGame()
 {   
 
-    var id=null;
     var block=document.getElementById("block1");
     var i=document.getElementsByClassName("outer")[0].offsetWidth;
     var j=document.getElementsByClassName("outer")[0].offsetWidth;
