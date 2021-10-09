@@ -31,13 +31,22 @@ body{
     top: 50%;
     z-index: 2;
 }
-#block{
+#block1{
     background-image: url(image/block.jpg);
     background-position: center;
     position: relative;
     width:60px;
     height: 100%;
     left: -200px;
+    background-size: contain;
+}
+#block2{
+    background-image: url(image/block.jpg);
+    background-position: center;
+    position: relative;
+    width:60px;
+    height: 100%;
+    left: 1900px;
     background-size: contain;
 }
 .btn{
@@ -48,7 +57,17 @@ body{
     color: white;
     border-radius: 20%;
 }
-#hole{
+#hole1{
+    background-image: url(image/hole.jpg);
+    background-position: center;
+    position: relative;
+    top: 200px;
+    height: 220px;
+    width: 60px;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+#hole2{
     background-image: url(image/hole.jpg);
     background-position: center;
     position: relative;

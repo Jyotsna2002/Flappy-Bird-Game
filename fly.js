@@ -53,16 +53,15 @@ function startGame()
             i=document.getElementsByClassName("outer")[0].offsetWidth;
             holePosition();
         }
-
-        else{
-            document.getElementById("block").style.left=i+"px";
+        else
+        {
+            document.getElementById("block1").style.left=i+"px";
             document.getElementsByClassName("outer")[0].style.backgroundPositionX=j+"px";
-       
-        // document.getElementById("pipebottom").style.height = 100 - (document.getElementById("pipetop").offsetHeight + 15) + "%";
         }
     }
     function holePosition(){
-    document.getElementById("hole").style.top=100+(Math.random()*300)+"px";         
+    document.getElementById("hole1").style.top=100+(Math.random()*300)+"px";         
+    document.getElementById("hole2").style.top=100+(Math.random()*300)+"px";         
         
         
     }
