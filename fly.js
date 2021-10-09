@@ -38,8 +38,7 @@ function jump(){
     },6);
 }
 function startGame()
-{   
-
+{
     var id=null;
     var block=document.getElementById("block1");
     var i=document.getElementsByClassName("outer")[0].offsetWidth;
