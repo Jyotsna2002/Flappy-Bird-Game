@@ -1,6 +1,7 @@
 var character=document.getElementById("bird");
 var jumping=0;
 var counter=0;
+var id=null;
 function free()
 {
 setInterval(down,10);
@@ -11,10 +12,12 @@ function down()
     character.style.transform="rotate(60deg)";
     var holetop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
     var blockleft=parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    if((charactop>850)||((blockleft<-15)&&(blockleft>109)))  
+    if((charactop>850)||((blockleft<155)&&(blockleft>50)))  
     {
-        window.alert("game over!!");
+       window.alert("game over!!");
        character.style.top=100+"px";
+       document.getElementById(replay).style.visibility="visible";
+       document.getElementById(btn).style.visibility="hidden";
     } 
 }
 }
@@ -36,7 +39,6 @@ function jump(){
 }
 function startGame()
 {   
-    clearInterval(id);
 
     var id=null;
     var block=document.getElementById("block1");
