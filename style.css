@@ -13,8 +13,8 @@ body{
     background-image: url(./image/background.jpg);
     background-size:contain;
     position: relative;
-    height: 90vh;
-    width:90vw;
+    height: 1000px;
+    width:1800px;
     border: none;
     top: 4.98vh;
     margin: auto;
