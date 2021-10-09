@@ -61,9 +61,7 @@ function startGame()
     }
     function holePosition(){
     document.getElementById("hole1").style.top=100+(Math.random()*300)+"px";         
-    document.getElementById("hole2").style.top=100+(Math.random()*300)+"px";         
-        
-        
+    document.getElementById("hole2").style.top=100+(Math.random()*300)+"px";             
     }
 
 }
