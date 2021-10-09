@@ -13,8 +13,8 @@ function down()
     var blockleft=parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if((charactop>850)||((blockleft<-15)&&(blockleft>109)))  
     {
-      /* window.alert("game over!!");*/
-       character.style.top=50+"px";
+        window.alert("game over!!");
+       character.style.top=100+"px";
     } 
 }
 }
@@ -39,11 +39,9 @@ function startGame()
     clearInterval(id);
 
     var id=null;
-    var block=document.getElementById("block");
+    var block=document.getElementById("block1");
     var i=document.getElementsByClassName("outer")[0].offsetWidth;
     var j=document.getElementsByClassName("outer")[0].offsetWidth;
-    var x=7+Math.random()*10;
-    var y=8+Math.random()*10;
     id = setInterval(moveBlock,0.1);
     function moveBlock()
     {
