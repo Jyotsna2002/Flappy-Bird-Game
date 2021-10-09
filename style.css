@@ -35,7 +35,7 @@ body{
     background-image: url(image/block.jpg);
     background-position: center;
     position: relative;
-    width:50px;
+    width:60px;
     height: 100%;
     left: -200px;
     background-size: contain;
@@ -54,7 +54,7 @@ body{
     position: relative;
     top: 200px;
     height: 220px;
-    width: 55px;
+    width: 60px;
     background-size:cover;
     background-repeat: no-repeat;
 }
