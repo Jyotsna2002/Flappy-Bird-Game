@@ -4,7 +4,7 @@
 }
 body{
     height: 100vh;
-    background-image: linear-gradient(to top, #c7c7ca 0%, #f0b20a 100%);
+    background-image: linear-gradient(to top, #c7c7ca 0%, #f09f0a 100%);
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -14,9 +14,9 @@ body{
     background-size:contain;
     position: relative;
     height: 1000px;
-    width:1800px;
+    width:2200px;
     border: none;
-    top: 4.98vh;
+    top: 7.5vh;
     margin: auto;
     background-repeat:repeat-x;
     box-shadow: 5px 5px 100px grey;
@@ -24,18 +24,17 @@ body{
     overflow: hidden;
 }
 #bird{
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    top: 200px;
-    top: 50%;
-    z-index: 2;
+    top: 500px;
+    z-index: 1;
 }
 #block1{
     background-image: url(image/block.jpg);
     background-position: center;
     position: relative;
-    width:60px;
+    width:100px;
     height: 100%;
     left: -200px;
     background-size: contain;
@@ -51,11 +50,19 @@ body{
 }
 .btn{
     position: absolute;
-    width: 4%;
-    height: 3%;
-    background-color: gray;
+    width: 200px;
+    height: 88px;
+    background-color: rgb(38, 163, 24);
     color: white;
-    border-radius: 20%;
+    font-size: 50px;
+    z-index: 1;
+    left:180px;
+    border: transparent;
+}
+.btn:hover{
+    background-color:transparent;
+    box-shadow:3px 5px 100px grey;
+    border: 5px solid white;
 }
 #hole1{
     background-image: url(image/hole.jpg);
@@ -72,8 +79,8 @@ body{
     background-position: center;
     position: relative;
     top: 200px;
-    height: 220px;
-    width: 60px;
+    height: 300px;
+    width: 100px;
     background-size:cover;
     background-repeat: no-repeat;
 }

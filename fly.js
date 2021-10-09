@@ -3,18 +3,17 @@ var jumping=0;
 var counter=0;
 function free()
 {
-setInterval(down,20);
+setInterval(down,10);
 function down()
 {
     var charactop=parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     character.style.top=(charactop+3)+'px'; 
     character.style.transform="rotate(60deg)";
-    /*var holetop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
+    var holetop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
     var blockleft=parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    */
-    if(charactop>456)  
+    if((charactop>850)||((blockleft<-15)&&(blockleft>109)))  
     {
-        window.alert("game over!!");
+      /* window.alert("game over!!");*/
        character.style.top=50+"px";
     } 
 }
@@ -25,8 +24,8 @@ function jump(){
     var jumpInterval = setInterval(function(){
         var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
         if((characterTop>0))
-        character.style.top = (characterTop-4)+"px";
-        character.style.transform="rotate(-360deg)";
+        character.style.top = (characterTop-7)+"px";
+        character.style.transform="rotate(0deg)";
         if(jumpCount>20){
             clearInterval(jumpInterval);
             jumping=0;
@@ -45,11 +44,11 @@ function startGame()
     var j=document.getElementsByClassName("outer")[0].offsetWidth;
     var x=7+Math.random()*10;
     var y=8+Math.random()*10;
-    id = setInterval(moveBlock,5);
+    id = setInterval(moveBlock,0.1);
     function moveBlock()
     {
-        i--;j--;
-        if(i==-100){
+        i-=2;j--;
+        if(i==-200){
             i=document.getElementsByClassName("outer")[0].offsetWidth;
             holePosition();
         }
