@@ -40,18 +40,16 @@ function startGame()
 
     var id=null;
     var block=document.getElementById("block");
-    block.style.visibility="visible";
     var i=document.getElementsByClassName("outer")[0].offsetWidth;
     var x=7+Math.random()*10;
     var y=8+Math.random()*10;
-    document.getElementById("pipetop").style.top ="-"+x+"%";
-    document.getElementById("pipebottom").style.bottom="-"+y+"%";
     id = setInterval(moveBlock,5);
     function moveBlock()
     {
         i--;
         if(i==-80){
             i=document.getElementsByClassName("outer")[0].offsetWidth;
+            blockPosition();
         }
 
         else{
@@ -61,7 +59,8 @@ function startGame()
         }
     }
     function blockPosition(){
-        
+    document.getElementById("pipetop").style.top=-300+(Math.random()*200-100)+"px";      
+    document.getElementById("pipebottom").style.top=600+(Math.random()*200-100)+"px";      
         
         
     }

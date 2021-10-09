@@ -32,11 +32,10 @@ body{
     top: 50%;
 }
 #block{
-    position: absolute;
+    position: relative;
     width:8%;
     height: 100%;
-    visibility: hidden ;
-    left: -100px;
+    left: -200px;
 }
 .btn{
     position: absolute;
@@ -55,14 +54,14 @@ body{
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
-    top: 0px;
+    bottom:0px;
 }
 #pipebottom{
     position: absolute;
     background-image: url(image/pipebottom.png);
-    height: 50%;
+    height: 1000px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
-    bottom:0px;
+    top:500px;
 }
