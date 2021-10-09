@@ -51,7 +51,7 @@ body{
     position: absolute;
     display: inline-block;
     background-image: url(image/pipetop.png);
-    height: 1000px;
+    height: 200px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -60,7 +60,7 @@ body{
 #pipebottom{
     position: absolute;
     background-image: url(image/pipebottom.png);
-    height: 50%;
+    height: 200px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;

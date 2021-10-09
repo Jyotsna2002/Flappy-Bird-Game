@@ -7,15 +7,14 @@ setInterval(down,20);
 function down()
 {
     var charactop=parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-    character.style.top=(charactop+4)+'px'; 
+    character.style.top=(charactop+3)+'px'; 
    /*var holetop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
     var blockleft=parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     */
-    var ctop=window.getComputedStyle(character).getPropertyValue("top");
-    if(ctop==470)  
+    if(charactop>456)  
     {
         window.alert("game over!!");
-        character.style.top=100+"px";
+       character.style.top=50+"px";
     } 
 }
 }
