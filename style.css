@@ -10,7 +10,7 @@ body{
     overflow: hidden;
 }
 .outer{
-    background-image: url(./image/background.jpg);
+    background-image: url(./image/background2.png);
     background-size:contain;
     position: relative;
     height: 1000px;
@@ -31,6 +31,7 @@ body{
     z-index: 1;
 }
 #block1{
+    display: inline-block;
     background-image: url(image/block.jpg);
     background-position: center;
     position: relative;
@@ -40,12 +41,12 @@ body{
     background-size: contain;
 }
 #block2{
+    display: inline-block;
     background-image: url(image/block.jpg);
     background-position: center;
     position: relative;
-    width:60px;
+    width: 100px;
     height: 100%;
-    left: 1900px;
     background-size: contain;
 }
 #btn{
@@ -65,7 +66,7 @@ body{
     border: 5px solid white;
 }
 #hole1{
-    background-image: url(image/hole.jpg);
+    background-image: url(image/hole.png);
     background-position: center;
     position: relative;
     top: 200px;
@@ -75,7 +76,7 @@ body{
     background-repeat: no-repeat;
 }
 #hole2{
-    background-image: url(image/hole.jpg);
+    background-image: url(image/hole.png);
     background-position: center;
     position: relative;
     top: 200px;

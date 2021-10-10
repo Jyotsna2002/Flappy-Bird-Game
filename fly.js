@@ -12,14 +12,14 @@ function down()
     character.style.transform="rotate(60deg)";
 /*    var holetop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));*/
     var blockleft=parseInt(window.getComputedStyle(block1).getPropertyValue("left"));
-    if((charactop>850)||((blockleft<155)&&(blockleft>50)))  
-    {
-        //    window.alert("game over!!");
-        stop();
-        character.style.top=100+"px";
-        document.getElementById(replay).style.visibility="visible";
-        document.getElementById(btn).style.visibility="hidden";
-    } 
+    // if((charactop>850)||((blockleft<155)&&(blockleft>50)))  
+    // {
+    //     //    window.alert("game over!!");
+    //     stop();
+    //     character.style.top=100+"px";
+    //     document.getElementById(replay).style.visibility="visible";
+    //     document.getElementById(btn).style.visibility="hidden";
+    // } 
 }
 }
 function  stop()
@@ -27,7 +27,6 @@ function  stop()
     document.getElementById("gameover").innerHTML="GameOver";
     document.getElementById("replay").style.visibility="visible";
     clearInterval(id);
-
 }
 function jump(){
     jumping= 1;
@@ -51,23 +50,30 @@ function startGame()
     var block=document.getElementById("block1");
     var i=document.getElementsByClassName("outer")[0].offsetWidth;
     var j=document.getElementsByClassName("outer")[0].offsetWidth;
+    var k=2800;
     id = setInterval(moveBlock,0.1);
     function moveBlock()
     {
-        i-=2;j--;
-        if(i==-200){
-            i=document.getElementsByClassName("outer")[0].offsetWidth;
-            holePosition();
+        i-=2;j-=2;k-=2;
+        if(i==-400){
+            i=document.getElementsByClassName("outer")[0].offsetWidth ;
+            holePosition("hole1");
+        }
+        else if(k==-200)
+        {
+            k=document.getElementsByClassName("outer")[0].offsetWidth + 200;
+            holePosition("hole2");
         }
         else
         {
             document.getElementById("block1").style.left=i+"px";
+            document.getElementById("block2").style.left=k+"px";
             document.getElementsByClassName("outer")[0].style.backgroundPositionX=j+"px";
         }
     }
-    function holePosition(){
-    document.getElementById("hole1").style.top=100+(Math.random()*300)+"px";         
-    document.getElementById("hole2").style.top=100+(Math.random()*300)+"px";             
+    function holePosition(hole)
+    {
+        document.getElementById(hole).style.top=100+(Math.random()*300)+"px";                     
     }
 
 }
