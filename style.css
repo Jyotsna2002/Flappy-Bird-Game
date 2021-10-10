@@ -24,11 +24,14 @@ body{
     overflow: hidden;
 }
 #bird{
-    width: 150px;
-    height: 150px;
+    background-image: url(image/chicken4.png);
+    width: 100px;
+    height: 100px;
     position: absolute;
     top: 500px;
     z-index: 1;
+    border-radius: 25%;
+    background-size: contain;
 }
 #block1{
     display: inline-block;
