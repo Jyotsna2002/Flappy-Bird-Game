@@ -22,21 +22,24 @@ function down()
     {
         //    window.alert("game over!!");
         stop();
-        
     } 
     else if((charactop>850)||(((blockleft<100)&&(blockleft>-50))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
     {
         //    window.alert("game over!!");
         stop();
-        
-    } 
+    }
+    else{
+        counter++;
+        console.log(counter);
+    }
+
 }
 }
 function stop()
 {   clearInterval(id); 
     
     document.getElementById("btn").style.visibility="hidden";
-    document.getElementById("gameover").innerHTML="GameOver"+counter;
+    document.getElementById("gameover").innerHTML="GameOver:<br>"+counter;
     document.getElementById("replay").style.visibility="visible";
 }
 function jump(){
