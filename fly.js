@@ -24,6 +24,7 @@ function down()
 }
 function  stop()
 {
+    
     document.getElementById("gameover").innerHTML="GameOver";
     document.getElementById("replay").style.visibility="visible";
     clearInterval(id);
