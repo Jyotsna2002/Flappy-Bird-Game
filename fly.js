@@ -13,18 +13,18 @@ function down()
     var holetop1=parseInt(window.getComputedStyle(hole1).getPropertyValue("top"));
     var holetop2=parseInt(window.getComputedStyle(hole2).getPropertyValue("top"));
     var birdtop=parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
-    var birdbottom=birdtop+150;
-    var holebottom1=holetop1+300;
-    var holebottom2=holetop2+300;
+    var birdbottom=birdtop+100;
+    var holebottom1=holetop1+310;
+    var holebottom2=holetop2+310;
     var blockleft=parseInt(window.getComputedStyle(block1).getPropertyValue("left"));
 
-    if((charactop>850)||(((blockleft<100)&&(blockleft>0))&&((birdtop<holetop1)||(birdbottom>holebottom1))))
+    if((charactop>850)||(((blockleft<110)&&(blockleft>0))&&((birdtop<holetop1)||(birdbottom>holebottom1))))
     {
         //    window.alert("game over!!");
         stop();
         
     } 
-    else if((charactop>850)||(((blockleft<100)&&(blockleft>0))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
+    else if((charactop>850)||(((blockleft<100)&&(blockleft>-50))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
     {
         //    window.alert("game over!!");
         stop();
@@ -33,12 +33,11 @@ function down()
 }
 }
 function stop()
-{
-    // character.style.top=100+"px";
+{   clearInterval(id); 
+    
     document.getElementById("btn").style.visibility="hidden";
-    document.getElementById("gameover").innerHTML="GameOver";
+    document.getElementById("gameover").innerHTML="GameOver"+counter;
     document.getElementById("replay").style.visibility="visible";
-    clearInterval(id); 
 }
 function jump(){
     jumping= 1;
@@ -66,9 +65,9 @@ function startGame()
     function moveBlock()
     {
         i-=2;j-=2;k-=2;
-        if(i==-400){
-            i=document.getElementsByClassName("outer")[0].offsetWidth ;
-            holePosition("hole1");
+        if(i==-300){
+           i=document.getElementsByClassName("outer")[0].offsetWidth ;
+           holePosition("hole1");
         }
         else if(k==-300)
         {

@@ -106,3 +106,13 @@ body{
     box-shadow:3px 5px 100px grey;
     border: 5px solid white;
 }
+#gameover{
+    font-size: 400px;
+    text-align: center;
+    width: 2200px;
+    height: 1000px;
+    z-index: 1;
+    position: absolute;
+    margin: 88px 180px;
+    
+}
