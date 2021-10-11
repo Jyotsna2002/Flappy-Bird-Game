@@ -16,16 +16,14 @@ function down()
     var birdbottom=birdtop+100;
     var holebottom1=holetop1+310;
     var holebottom2=holetop2+310;
-    var blockleft=parseInt(window.getComputedStyle(block1).getPropertyValue("left"));
-
-    if((charactop>850)||(((blockleft<110)&&(blockleft>0))&&((birdtop<holetop1)||(birdbottom>holebottom1))))
+    var blockleft1=parseInt(window.getComputedStyle(block1).getPropertyValue("left"));
+    var blockleft2=parseInt(window.getComputedStyle(block2).getPropertyValue("left"));
+    if((charactop>850)||(((blockleft1<100)&&(blockleft1>-50))&&((birdtop<holetop1)||(birdbottom>holebottom1))))
     {
-        //    window.alert("game over!!");
         stop();
     } 
-    else if((charactop>850)||(((blockleft<100)&&(blockleft>-50))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
+   else if((charactop>850)||(((blockleft2<0)&&(blockleft2>-50))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
     {
-        //    window.alert("game over!!");
         stop();
     }
     else{
@@ -39,7 +37,7 @@ function stop()
 {   clearInterval(id); 
     
     document.getElementById("btn").style.visibility="hidden";
-    document.getElementById("gameover").innerHTML="GameOver:<br>"+counter;
+    document.getElementById("gameover").innerHTML="Game Over:<br>"+counter;
     document.getElementById("replay").style.visibility="visible";
 }
 function jump(){
@@ -69,8 +67,8 @@ function startGame()
     {
         i-=2;j-=2;k-=2;
         if(i==-300){
-           i=document.getElementsByClassName("outer")[0].offsetWidth ;
-           holePosition("hole1");
+            i=document.getElementsByClassName("outer")[0].offsetWidth ;
+            holePosition("hole1");
         }
         else if(k==-300)
         {
@@ -83,10 +81,12 @@ function startGame()
             document.getElementById("block2").style.left=k+"px";
             document.getElementsByClassName("outer")[0].style.backgroundPositionX=j+"px";
         }
+
+       
     }
     function holePosition(hole)
     {
         document.getElementById(hole).style.top=100+(Math.random()*300)+"px";                     
     }
-
+    
 }
