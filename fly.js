@@ -22,15 +22,15 @@ function down()
     var blockleft1=parseInt(window.getComputedStyle(block1).getPropertyValue("left"));
     var blockleft2=parseInt(window.getComputedStyle(block2).getPropertyValue("left"));
     var blockleft3=parseInt(window.getComputedStyle(block3).getPropertyValue("left"));
-    if((charactop>850)||(((blockleft1<100)&&(blockleft1>-50))&&((birdtop<holetop1)||(birdbottom>holebottom1))))
+    if((charactop>850)||(((blockleft1<100)&&(blockleft1>-100))&&((birdtop<holetop1)||(birdbottom>holebottom1))))
     {
         stop();
     } 
-   else if((charactop>850)||(((blockleft2<0)&&(blockleft2>-10))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
+   else if((charactop>850)||(((blockleft2<0)&&(blockleft2>-200))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
     {
         stop();
     }
-   else if((charactop>850)||(((blockleft3<-100)&&(blockleft3>-250))&&((birdtop<holetop3)||(birdbottom>holebottom3))))
+   else if((charactop>850)||(((blockleft3<-100)&&(blockleft3>-300))&&((birdtop<holetop3)||(birdbottom>holebottom3))))
     {
         stop();
     }
@@ -49,6 +49,10 @@ function stop()
     document.getElementById("gameover").innerHTML="Game Over:<br>"+counter;
     document.getElementById("replay").style.visibility="visible";
 }
+function control(event){
+    if(event.key==' ')
+    jump();
+}
 function jump(){
     jumping= 1;
     let jumpCount = 0;
@@ -65,6 +69,7 @@ function jump(){
         jumpCount++;
     },6);
 }
+document.addEventListener('keyup',control);
 function startGame()
 {   
     clearInterval(id);

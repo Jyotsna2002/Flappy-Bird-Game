@@ -33,7 +33,7 @@ body{
     border-radius: 25%;
     background-size: contain;
 }
-#block1{
+#block1{ 
     display: inline-block;
     background-image: url(image/block.jpg);
     background-position: center;
