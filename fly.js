@@ -22,15 +22,15 @@ function down()
     var blockleft1=parseInt(window.getComputedStyle(block1).getPropertyValue("left"));
     var blockleft2=parseInt(window.getComputedStyle(block2).getPropertyValue("left"));
     var blockleft3=parseInt(window.getComputedStyle(block3).getPropertyValue("left"));
-    if((charactop>850)||(((blockleft1<100)&&(blockleft1>-100))&&((birdtop<holetop1)||(birdbottom>holebottom1))))
+    if((charactop>900)||(((blockleft1<100)&&(blockleft1>-100))&&((birdtop<holetop1)||(birdbottom>holebottom1))))
     {
         stop();
     } 
-   else if((charactop>850)||(((blockleft2<0)&&(blockleft2>-200))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
+   else if((charactop>900)||(((blockleft2<0)&&(blockleft2>-200))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
     {
         stop();
     }
-   else if((charactop>850)||(((blockleft3<-100)&&(blockleft3>-300))&&((birdtop<holetop3)||(birdbottom>holebottom3))))
+   else if((charactop>900)||(((blockleft3<-100)&&(blockleft3>-300))&&((birdtop<holetop3)||(birdbottom>holebottom3))))
     {
         stop();
     }
