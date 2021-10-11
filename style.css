@@ -53,6 +53,16 @@ body{
     left:-400px;
     background-size: contain;
 }
+#block3{
+    display: inline-block;
+    background-image: url(image/block.jpg);
+    background-position: center;
+    position: relative;
+    width: 100px;
+    height: 100%;
+    left:-400px;
+    background-size: contain;
+}
 #btn{
     position: absolute;
     width: 200px;
@@ -89,6 +99,16 @@ body{
     background-size:cover;
     background-repeat: no-repeat;
 }
+#hole3{
+    background-image: url(image/hole.png);
+    background-position: center;
+    position: relative;
+    top: 200px;
+    height: 300px;
+    width: 100px;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
 #replay{
     position: absolute;
     width: 200px;
@@ -107,12 +127,24 @@ body{
     border: 5px solid white;
 }
 #gameover{
-    font-size: 400px;
+    font-size: 300px;
     text-align: center;
     width: 2200px;
     height: 1000px;
     z-index: 1;
     position: absolute;
     margin: 88px 180px;
-    
+    top: auto;
+    font-family: 'Jacques Francois Shadow', cursive;
+}
+#score{
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    margin: 0px;
+    font-size: 50px;
+    z-index: 1;
+    color: white;
+    right: 20px;
+    font-family: 'Jacques Francois Shadow', cursive;
 }
