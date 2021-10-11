@@ -148,3 +148,13 @@ body{
     right: 20px;
     font-family: 'Jacques Francois Shadow', cursive;
 }
+#flappy{
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    font-size: 60px;
+    left: 1050px;
+    justify-content: center;
+    font-family: 'Libre Baskerville', serif;
+}
