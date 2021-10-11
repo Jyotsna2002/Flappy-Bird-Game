@@ -1,5 +1,4 @@
 var character=document.getElementById("bird");
-var jumping=0;
 var counter=0;
 var id=null;
 function free()
@@ -54,7 +53,6 @@ function control(event){
     jump();
 }
 function jump(){
-    jumping= 1;
     let jumpCount = 0;
     var jumpInterval = setInterval(function(){
         var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
@@ -63,7 +61,6 @@ function jump(){
         character.style.transform="rotate(0deg)";
         if(jumpCount>20){
             clearInterval(jumpInterval);
-            jumping=0;
             jumpCount=0;
         }
         jumpCount++;
