@@ -1,10 +1,12 @@
 var character=document.getElementById("bird");
 var counter=0;
 var id=null;
+var time=null;
+var call=true;
 function free()
 {
     document.getElementById("btn").style.visibility="hidden";
-setInterval(down,10);
+time=setInterval(down,10);
 function down()
 {
     var charactop=parseInt(window.getComputedStyle(character).getPropertyValue("top"));
@@ -25,26 +27,28 @@ function down()
     var cright=charleft+100;
     var cleft=charleft-100;
     if((charactop>900)||(((blockleft1<cright)&&(blockleft1>cleft))&&((birdtop<holetop1)||(birdbottom>holebottom1))))
-    {  
+    {    clearInterval(id)
         stop();
     } 
    else if((charactop>900)||(((blockleft2<cright-100)&&(blockleft2>cleft-100))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
-    {
+    {     clearInterval(id) 
         stop();
     }
    else if((charactop>900)||(((blockleft3<cright-200)&&(blockleft3>cleft-200))&&((birdtop<holetop3)||(birdbottom>holebottom3))))
-    {
+    {    clearInterval(id)
         stop();
     }
 
 }
 }
 function stop()
-{   clearInterval(id); 
-    
+{   call=false;
     document.getElementById("btn").style.visibility="hidden";
     document.getElementById("gameover").innerHTML="Game Over:<br>"+counter;
     document.getElementById("replay").style.visibility="visible";
+    var charactop=parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    if(charactop>900)
+    clearInterval(time);
 }
 function control(event){
     if(event.keyCode==38)
@@ -94,16 +98,15 @@ function left()
 
 document.addEventListener('keyup',control2);
 function startGame()
-{   
-    clearInterval(id);
+{  
     var i=document.getElementsByClassName("outer")[0].offsetWidth;
     var j=document.getElementsByClassName("outer")[0].offsetWidth;
     var k=3000;
     var m=3800;
     id = setInterval(moveBlock,0.1);
     function moveBlock()
-    {
-        i-=2;j-=2;k-=2;m-=2;
+    {   if(call==true){
+        i-=1;j-=1;k-=1;m-=1;
         if(i==-300){
             i=document.getElementsByClassName("outer")[0].offsetWidth ;
             holePosition("hole1");
@@ -124,14 +127,17 @@ function startGame()
             document.getElementById("block3").style.left=m+"px";
             document.getElementsByClassName("outer")[0].style.backgroundPositionX=j+"px";
         }
+        if(call==true)
+        {
+        setTimeout(moveBlock,10000);
         counter++;
         document.getElementById("score").innerHTML="Score: "+counter;
         console.log(counter);
-       
+        }
+    }
     }
     function holePosition(hole)
     {
         document.getElementById(hole).style.top=100+(Math.random()*300)+"px";                     
     }
-    
 }
