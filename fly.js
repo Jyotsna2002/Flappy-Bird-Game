@@ -33,17 +33,14 @@ function down()
     {
         stop();
     }
-    else{
-        counter++;
-        document.getElementById("score").innerHTML="Score: "+counter;
-        console.log(counter);
-    }
-
+    // else{
+        
+    // }
+    
 }
 }
 function stop()
 {   clearInterval(id); 
-    
     document.getElementById("btn").style.visibility="hidden";
     document.getElementById("gameover").innerHTML="Game Over:<br>"+counter;
     document.getElementById("replay").style.visibility="visible";
@@ -68,7 +65,7 @@ function jump(){
 }
 document.addEventListener('keyup',control);
 function startGame()
-{   
+{   var dif=2;
     clearInterval(id);
     var i=document.getElementsByClassName("outer")[0].offsetWidth;
     var j=document.getElementsByClassName("outer")[0].offsetWidth;
@@ -77,7 +74,8 @@ function startGame()
     id = setInterval(moveBlock,0.1);
     function moveBlock()
     {
-        i-=2;j-=2;k-=2;m-=2;
+
+        i-=dif;j-=dif;k-=dif;m-=dif;
         if(i==-300){
             i=document.getElementsByClassName("outer")[0].offsetWidth ;
             holePosition("hole1");
@@ -90,6 +88,7 @@ function startGame()
         else if(m==-300){
             m=document.getElementsByClassName("outer")[0].offsetWidth;
             holePosition("hole3");
+            dif++;
         }
         else
         {
@@ -98,12 +97,13 @@ function startGame()
             document.getElementById("block3").style.left=m+"px";
             document.getElementsByClassName("outer")[0].style.backgroundPositionX=j+"px";
         }
-
-       
+        counter++;
+        document.getElementById("score").innerHTML="Score: "+counter;
     }
     function holePosition(hole)
     {
-        document.getElementById(hole).style.top=100+(Math.random()*300)+"px";                     
+        document.getElementById(hole).style.top=100+(Math.random()*300)+"px";                   
     }
+
     
 }
