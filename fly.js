@@ -21,22 +21,20 @@ function down()
     var blockleft1=parseInt(window.getComputedStyle(block1).getPropertyValue("left"));
     var blockleft2=parseInt(window.getComputedStyle(block2).getPropertyValue("left"));
     var blockleft3=parseInt(window.getComputedStyle(block3).getPropertyValue("left"));
-    if((charactop>900)||(((blockleft1<100)&&(blockleft1>-100))&&((birdtop<holetop1)||(birdbottom>holebottom1))))
-    {
+    var charleft=parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    var cright=charleft+100;
+    var cleft=charleft-100;
+    if((charactop>900)||(((blockleft1<cright)&&(blockleft1>cleft))&&((birdtop<holetop1)||(birdbottom>holebottom1))))
+    {  
         stop();
     } 
-   else if((charactop>900)||(((blockleft2<0)&&(blockleft2>-200))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
+   else if((charactop>900)||(((blockleft2<cright-100)&&(blockleft2>cleft-100))&&((birdtop<holetop2)||(birdbottom>holebottom2))))
     {
         stop();
     }
-   else if((charactop>900)||(((blockleft3<-100)&&(blockleft3>-300))&&((birdtop<holetop3)||(birdbottom>holebottom3))))
+   else if((charactop>900)||(((blockleft3<cright-200)&&(blockleft3>cleft-200))&&((birdtop<holetop3)||(birdbottom>holebottom3))))
     {
         stop();
-    }
-    else{
-        counter++;
-        document.getElementById("score").innerHTML="Score: "+counter;
-        console.log(counter);
     }
 
 }
@@ -49,7 +47,7 @@ function stop()
     document.getElementById("replay").style.visibility="visible";
 }
 function control(event){
-    if(event.key==' ')
+    if(event.keyCode==38)
     jump();
 }
 function jump(){
@@ -67,6 +65,34 @@ function jump(){
     },6);
 }
 document.addEventListener('keyup',control);
+function control1(event)
+{
+   if(event.keyCode==39)
+   right();
+}
+
+function right()
+{
+    var cright = parseInt(window.getComputedStyle(character).getPropertyValue("right"));
+    if(cright>0)
+    character.style.right=(cright-50)+'px';
+}
+
+document.addEventListener('keyup',control1);
+function control2(event)
+{
+   if(event.keyCode==37)
+   left();
+}
+
+function left()
+{
+    var cleft = parseInt(window.getComputedStyle(character).getPropertyValue("right"));
+    if(cleft<2100)
+    character.style.right=(cleft+50)+'px';
+}
+
+document.addEventListener('keyup',control2);
 function startGame()
 {   
     clearInterval(id);
@@ -98,7 +124,9 @@ function startGame()
             document.getElementById("block3").style.left=m+"px";
             document.getElementsByClassName("outer")[0].style.backgroundPositionX=j+"px";
         }
-
+        counter++;
+        document.getElementById("score").innerHTML="Score: "+counter;
+        console.log(counter);
        
     }
     function holePosition(hole)
