@@ -65,7 +65,7 @@ function jump(){
 }
 document.addEventListener('keyup',control);
 function startGame()
-{   var dif=2;
+{
     clearInterval(id);
     var i=document.getElementsByClassName("outer")[0].offsetWidth;
     var j=document.getElementsByClassName("outer")[0].offsetWidth;
@@ -75,7 +75,7 @@ function startGame()
     function moveBlock()
     {
 
-        i-=dif;j-=dif;k-=dif;m-=dif;
+        i-=2;j-=2;k-=2;m-=2;
         if(i==-300){
             i=document.getElementsByClassName("outer")[0].offsetWidth ;
             holePosition("hole1");
@@ -88,7 +88,6 @@ function startGame()
         else if(m==-300){
             m=document.getElementsByClassName("outer")[0].offsetWidth;
             holePosition("hole3");
-            dif++;
         }
         else
         {
