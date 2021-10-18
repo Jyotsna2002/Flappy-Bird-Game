@@ -103,10 +103,10 @@ function startGame()
     var j=document.getElementsByClassName("outer")[0].offsetWidth;
     var k=3000;
     var m=3800;
-    id = setInterval(moveBlock,0.1);
+    id = setInterval(moveBlock,0.3);
     function moveBlock()
     {   if(call==true){
-        i-=1;j-=1;k-=1;m-=1;
+        i-=2;j-=2;k-=2;m-=2;
         if(i==-300){
             i=document.getElementsByClassName("outer")[0].offsetWidth ;
             holePosition("hole1");
