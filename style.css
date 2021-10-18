@@ -24,7 +24,7 @@ body{
     overflow: hidden;
 }
 #bird{
-    background-image: url(image/chicken4.png);
+    background-image: url(image/bird1.png);
     width: 100px;
     height: 100px;
     position: absolute;
